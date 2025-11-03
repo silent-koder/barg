@@ -34,9 +34,6 @@ menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
 
-AOS.init({ duration: 800, once: false });
-feather.replace();
-
 const cards = document.querySelectorAll(".card");
 
 const observer = new IntersectionObserver(
@@ -47,7 +44,6 @@ const observer = new IntersectionObserver(
         setTimeout(() => {
           entry.target.classList.add("animate-show");
         }, index * 150);
-        observer.unobserve(entry.target);
       }
     });
   },
