@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom smooth scroll and font */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+@layer utilities {
+  .clip-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  }
+}
+header {
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease,
+    box-shadow 0.4s ease;
+}
+#mobileMenu {
+  transform-origin: top;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+#mobileMenu.hidden {
+  transform: scaleY(0);
+  opacity: 0;
+}
+#mobileMenu:not(.hidden) {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 1s ease-out forwards;
+}
+
+/* Create the slanted background shape */
+.clip-join {
+  clip-path: polygon(0 0, 100% 30%, 100% 70%, 0% 100%);
+}
+
+/* Simple fade-up animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.animate-show {
+  opacity: 100 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-out;
+}
