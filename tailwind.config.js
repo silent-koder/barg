@@ -7,6 +7,9 @@ module.exports = {
         brandBlue: {
           light: "#1e3a8a",
           dark: "#0f172a",
+          primary: "#2563eb",
+          "background-light": "#F8FAFC",
+          "background-dark": "#0f172a",
         },
       },
       backgroundImage: {

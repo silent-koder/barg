@@ -93,41 +93,50 @@ const popObserver = new IntersectionObserver(
 
 popImages.forEach((img) => popObserver.observe(img));
 
-// gggg
-const fixedHeader = document.getElementById("glassHeader");
-const navLinks = header.querySelectorAll("nav a");
-const logo = header.querySelector("h1");
-const fixedMenuBtn = document.getElementById("menuBtn");
+//reusable function for the fixed header on scroll
+function initFixedHeader({
+  headerId = "glassHeader",
+  menuBtnId = "menuBtn",
+  scrollTrigger = 800,
+} = {}) {
+  const fixedHeader = document.getElementById(headerId);
+  if (!fixedHeader) return;
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 800) {
-    // Bright mode for white backgrounds
-    header.classList.remove("bg-white/10", "border-white/20", "text-white");
-    header.classList.add(
-      "bg-white/70",
-      "border-gray-200",
-      "text-gray-900",
-      "shadow-md",
-      "backdrop-blur-lg"
-    );
+  const navLinks = fixedHeader.querySelectorAll("nav a");
+  const logo = fixedHeader.querySelector("h1");
+  const fixedMenuBtn = document.getElementById(menuBtnId);
 
-    // Update link + icon colors
-    navLinks.forEach((link) => link.classList.add("text-gray-900"));
-    logo.classList.add("text-gray-900");
-    menuBtn.classList.add("text-gray-900");
-  } else {
-    // Revert to dark overlay mode
-    header.classList.add("bg-white/10", "border-white/20", "text-white");
-    header.classList.remove(
-      "bg-white/70",
-      "border-gray-200",
-      "text-gray-900",
-      "shadow-md"
-    );
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > scrollTrigger) {
+      fixedHeader.classList.remove(
+        "bg-white/10",
+        "border-white/20",
+        "text-white"
+      );
+      fixedHeader.classList.add(
+        "bg-white/70",
+        "border-gray-200",
+        "text-gray-900",
+        "shadow-md",
+        "backdrop-blur-lg"
+      );
 
-    // Reset link + icon colors
-    navLinks.forEach((link) => link.classList.remove("text-gray-900"));
-    logo.classList.remove("text-gray-900");
-    menuBtn.classList.remove("text-gray-900");
-  }
-});
+      navLinks.forEach((link) => link.classList.add("text-gray-900"));
+      logo.classList.add("text-gray-900");
+      if (fixedMenuBtn) fixedMenuBtn.classList.add("text-gray-900");
+    } else {
+      fixedHeader.classList.add("bg-white/10", "border-white/20", "text-white");
+      fixedHeader.classList.remove(
+        "bg-white/70",
+        "border-gray-200",
+        "text-gray-900",
+        "shadow-md"
+      );
+
+      navLinks.forEach((link) => link.classList.remove("text-gray-900"));
+      logo.classList.remove("text-gray-900");
+      if (fixedMenuBtn) fixedMenuBtn.classList.remove("text-gray-900");
+    }
+  });
+}
+initFixedHeader();
