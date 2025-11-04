@@ -12,23 +12,23 @@
     <!-- Navbar -->
     <header
       id="glassHeader"
-      class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 mx-auto bg-white/5 backdrop-blur-sm border-b border-white/10 z-50"
+      class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 mx-auto bg-white/10 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300 z-50 text-white"
     >
       <!-- Logo -->
-      <h1 class="text-2xl font-bold">Brad</h1>
+      <h1 class="text-2xl font-bold transition-colors duration-300">Brad</h1>
 
       <!-- Desktop Nav -->
       <nav id="navMenu" class="hidden md:flex space-x-6">
-        <a href="#courses" class="hover:text-blue-400 transition-colors"
+        <a href="#courses" class="hover:text-blue-500 transition-colors"
           >Courses</a
         >
-        <a href="#tutors" class="hover:text-blue-400 transition-colors"
+        <a href="#tutors" class="hover:text-blue-500 transition-colors"
           >Tutors</a
         >
-        <a href="#pricing" class="hover:text-blue-400 transition-colors"
+        <a href="#pricing" class="hover:text-blue-500 transition-colors"
           >Pricing</a
         >
-        <a href="#contact" class="hover:text-blue-400 transition-colors"
+        <a href="#contact" class="hover:text-blue-500 transition-colors"
           >Contact</a
         >
       </nav>
@@ -36,7 +36,7 @@
       <!-- Mobile Menu Button -->
       <button
         id="menuBtn"
-        class="md:hidden text-white focus:outline-none"
+        class="md:hidden focus:outline-none transition-colors duration-300"
         aria-label="Toggle menu"
       >
         <svg
@@ -55,10 +55,10 @@
         </svg>
       </button>
 
-      <!-- Vertically Stacked Dropdown -->
+      <!-- Mobile Dropdown -->
       <div
         id="mobileMenu"
-        class="absolute top-full left-0 right-0 mx-auto w-4/5 max-w-md bg-gray-800 border-t border-white/20 md:hidden flex flex-col items-center py-6 space-y-4 text-lg"
+        class="absolute hidden top-full left-0 right-0 mx-auto w-4/5 max-w-md bg-gray-800 border-t border-white/20 md:hidden flex flex-col items-center py-6 space-y-4 text-lg"
       >
         <a href="#courses" class="block hover:text-blue-400 transition-colors"
           >Courses</a
@@ -108,11 +108,11 @@
       <!-- COURSES -->
       <section
         id="courses"
-        class="grid md:grid-cols-4 gap-6 px-6 py-20 max-w-7xl mx-auto relative z-20"
+        class="grid grid-cols-2 md:grid-cols-4 gap-6 px-6 pt-20 pb-10 max-w-7xl mx-auto relative z-20"
       >
         <!-- Card 1 -->
         <div
-          class="bg-white/10 backdrop-blur-md overflow-hidden text-center shadow-lg hover:shadow-blue-500/30 transition-all duration-500 opacity-0 translate-y-10 card"
+          class="card bg-white/10 backdrop-blur-md overflow-hidden text-center shadow-lg hover:shadow-blue-500/30 hover:scale-[1.03] transition-all duration-500 opacity-0 translate-y-10"
         >
           <img
             src="https://media.istockphoto.com/id/1414423612/photo/time-for-homework.jpg?s=1024x1024&w=is&k=20&c=33HQnPrBiWCEE_zUKVNuUKGs8_yF1iumYE6F2Gc2cZU="
@@ -120,7 +120,6 @@
             class="w-full h-40 object-cover"
           />
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-white">Quality Materials</h3>
             <p class="text-white">
               Access curated notes and resources designed by experts.
             </p>
@@ -129,15 +128,14 @@
 
         <!-- Card 2 -->
         <div
-          class="bg-white/10 backdrop-blur-md overflow-hidden text-center shadow-lg hover:shadow-blue-500/30 transition-all duration-500 opacity-0 translate-y-10 card"
+          class="card bg-white/10 backdrop-blur-md overflow-hidden text-center shadow-lg hover:shadow-blue-500/30 hover:scale-[1.03] transition-all duration-500 opacity-0 translate-y-10"
         >
           <img
-            src="https://images.unsplash.com/photo-1758270704226-db897b180243?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudC1yYWlzaW5nLWhhbmQtaW4tY2xhc3Nyb29tLWF0LXRoZS1oaWdoLXNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500"
+            src="https://images.unsplash.com/photo-1758270704226-db897b180243?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500"
             alt="Expert Tutors"
             class="w-full h-40 object-cover"
           />
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-white">Expert Tutors</h3>
             <p class="text-white">
               Learn directly from skilled educators in various subjects.
             </p>
@@ -146,7 +144,7 @@
 
         <!-- Card 3 -->
         <div
-          class="bg-white/10 backdrop-blur-md overflow-hidden text-center shadow-lg hover:shadow-blue-500/30 transition-all duration-500 opacity-0 translate-y-10 card"
+          class="card bg-white/10 backdrop-blur-md overflow-hidden text-center shadow-lg hover:shadow-blue-500/30 hover:scale-[1.03] transition-all duration-500 opacity-0 translate-y-10"
         >
           <img
             src="https://plus.unsplash.com/premium_photo-1664100195116-a8a94a0b7b41?auto=format&fit=crop&q=80&w=870"
@@ -154,10 +152,6 @@
             class="w-full h-40 object-cover"
           />
           <div class="p-6">
-            <i data-feather="activity" class="mx-auto mb-3 text-blue-400"></i>
-            <h3 class="text-xl font-bold mb-2 text-white">
-              Interactive Learning
-            </h3>
             <p class="text-white">
               Engage with live tutorials, exercises, and practice sessions.
             </p>
@@ -166,7 +160,7 @@
 
         <!-- Card 4 -->
         <div
-          class="bg-white/10 backdrop-blur-md overflow-hidden text-center shadow-lg hover:shadow-blue-500/30 transition-all duration-500 opacity-0 translate-y-10 card"
+          class="card bg-white/10 backdrop-blur-md overflow-hidden text-center shadow-lg hover:shadow-blue-500/30 hover:scale-[1.03] transition-all duration-500 opacity-0 translate-y-10"
         >
           <img
             src="https://images.unsplash.com/photo-1613825787641-2dbbd4f96a1c?auto=format&fit=crop&q=60&w=500"
@@ -174,8 +168,6 @@
             class="w-full h-40 object-cover"
           />
           <div class="p-6">
-            <i data-feather="award" class="mx-auto mb-3 text-blue-400"></i>
-            <h3 class="text-xl font-bold mb-2 text-white">Certified Results</h3>
             <p class="text-white">
               Track your growth and earn certificates for achievements.
             </p>
@@ -184,7 +176,7 @@
       </section>
     </section>
     <!-- Impact Section -->
-    <section class="bg-gray-50 text-gray-800 py-20">
+    <section class="bg-gray-50 text-gray-800 pt-20 pb-10">
       <!-- Top Text -->
       <div class="max-w-3xl mx-auto text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-semibold mb-4">
@@ -195,111 +187,116 @@
           improve student performance in various subjects.
         </p>
       </div>
-
       <!-- Center Image -->
       <div class="flex justify-center mb-20">
         <img
           src="https://images.unsplash.com/photo-1740635341299-3b8e3490f546?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN0dWRlbnQtcmFpc2luZy1oYW5kLWluLWNsYXNzcm9vbS1hdC10aGUtaGlnaC1zY2hvb2x8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500"
           alt="Tutoring session"
-          class="rounded-lg shadow-lg w-[80%] md:w-[60%] object-cover"
+          class="pop-image opacity-0 scale-90 translate-y-6 transition-all duration-700 ease-out rounded-lg shadow-lg w-[80%] md:w-[60%] object-cover"
           style="clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%)"
         />
       </div>
 
-      <div
-        class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6"
-      >
-        <!-- Left: Text -->
-        <div class="opacity-0 translate-x-[-30px] animate-fadeInLeft">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Meet Our Tutors
-          </h2>
-          <p class="text-gray-600 mb-8 leading-relaxed">
-            Our expert tutors bring years of experience, passion, and creativity
-            into every lesson. They make learning engaging, effective, and
-            personalized for every student.
-          </p>
-
-          <!-- Highlights -->
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <div
-                class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-md"
-              >
-                <i data-feather="star" class="text-blue-500"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-lg text-gray-900">
-                  Academic Excellence
-                </h4>
-                <p class="text-gray-600">
-                  We ensure every student achieves their learning goals with
-                  personalized guidance.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start space-x-4">
-              <div
-                class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-md"
-              >
-                <i data-feather="user" class="text-blue-500"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-lg text-gray-900">
-                  Personalized Learning
-                </h4>
-                <p class="text-gray-600">
-                  Each session adapts to the student’s needs, pace, and goals.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start space-x-4">
-              <div
-                class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-md"
-              >
-                <i data-feather="award" class="text-blue-500"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-lg text-gray-900">
-                  Proven Success
-                </h4>
-                <p class="text-gray-600">
-                  Our students consistently excel through our structured
-                  learning system.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- CTA -->
-          <div class="mt-10">
-            <a
-              href="#contact"
-              class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition"
-            >
-              Book a Session
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Image -->
+      <section class="py-20 bg-gray-50">
         <div
-          class="flex justify-center opacity-0 translate-x-[30px] animate-fadeInRight"
+          class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6"
         >
-          <img
-            src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhY2hlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500"
-            alt="Our Tutors"
-            class="rounded-2xl shadow-lg w-[90%] object-cover"
-          />
+          <!-- Left: Text -->
+          <div
+            class="tutor-fade-left opacity-0 -translate-x-10 transition-all duration-700"
+          >
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              Meet Our Tutors
+            </h2>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              Our expert tutors bring years of experience, passion, and
+              creativity into every lesson. They make learning engaging,
+              effective, and personalized for every student.
+            </p>
+
+            <!-- Highlights -->
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-md"
+                >
+                  <i data-feather="star" class="text-blue-500"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg text-gray-900">
+                    Academic Excellence
+                  </h4>
+                  <p class="text-gray-600">
+                    We ensure every student achieves their learning goals with
+                    personalized guidance.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-md"
+                >
+                  <i data-feather="user" class="text-blue-500"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg text-gray-900">
+                    Personalized Learning
+                  </h4>
+                  <p class="text-gray-600">
+                    Each session adapts to the student’s needs, pace, and goals.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-md"
+                >
+                  <i data-feather="award" class="text-blue-500"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg text-gray-900">
+                    Proven Success
+                  </h4>
+                  <p class="text-gray-600">
+                    Our students consistently excel through our structured
+                    learning system.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-10">
+              <a
+                href="#contact"
+                class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition"
+              >
+                Book a Session
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Image -->
+          <div
+            class="tutor-fade-right opacity-0 translate-x-10 transition-all duration-700 flex justify-center"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=500"
+              alt="Our Tutors"
+              class="rounded-2xl shadow-lg w-[90%] hidden md:block object-cover"
+            />
+          </div>
         </div>
-      </div>
+      </section>
     </section>
 
     <!-- Metrics -->
-    <section id="metrics" class="py-16 px-6 text-center">
-      <h3 class="text-3xl font-bold mb-12">Trusted by learners everywhere</h3>
+    <section id="metrics" class="pt-6 pb-16 px-6 text-center">
+      <h3 class="text-3xl font-bold text-gray-800 mb-12">
+        Trusted by learners everywhere
+      </h3>
       <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         <div>
           <p class="text-5xl font-extrabold text-blue-400 mb-2">10K+</p>
@@ -319,30 +316,52 @@
     <section
       class="relative clip-join bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center text-white py-40 overflow-hidden"
     >
-      <!-- Text Content -->
+      <!-- Dark overlay (only on the image background) -->
+      <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+      <!-- Text Content (fixed height so absolute children align correctly on desktop) -->
       <div
-        class="relative z-10 h-full max-w-4xl mx-auto px-1 opacity-0 translate-y-10 animate-fadeUp"
+        class="relative z-10 h-auto md:h-[500px] max-w-6xl mx-auto px-4 opacity-0 translate-y-10 animate-fadeUp"
       >
+        <!-- Desktop: absolute positioned pieces -->
         <h2
-          class="absolute left-0 text-4xl md:text-6xl font-bold mb-4 leading-tight"
+          class="hidden md:block absolute top-6 left-4 text-3xl md:text-6xl font-bold text-white leading-tight"
         >
-          A Deep Dive into Learning <br class="hidden md:block" />
+          A Deep Dive into Learning
+          <br class="hidden md:block" />
           and Growth
         </h2>
+
         <p
-          class="text-gray-200 text-lg md:text-xl leading-relaxed p absolute bottom-0"
+          class="hidden md:block absolute bottom-6 right-4 text-gray-200 text-base md:text-xl max-w-md text-right leading-relaxed"
         >
           Transform your study habits with our new tutoring programs, where
           knowledge meets engagement. Elevate your learning with strategies that
           blend understanding and application seamlessly.
         </p>
+
+        <!-- Mobile: stacked and centered -->
+        <div
+          class="block md:hidden flex flex-col items-center text-center gap-3 p-4"
+        >
+          <h2 class="text-2xl font-bold leading-snug">
+            A Deep Dive into Learning and Growth
+          </h2>
+          <p class="text-gray-200 text-sm leading-relaxed pt-6">
+            Transform your study habits with our new tutoring programs, where
+            knowledge meets engagement. Elevate your learning with strategies
+            that blend understanding and application seamlessly.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Join Us -->
     <section class="text-center py-20 bg-blue-600/10">
-      <h3 class="text-3xl font-bold mb-4">Join Brad Tutorials Today</h3>
-      <p class="text-gray-300 mb-8">
+      <h3 class="text-3xl text-gray-800 font-bold mb-4">
+        Join Brad Tutorials Today
+      </h3>
+      <p class="text-gray-500 mb-8">
         Take the next step in your learning journey.
       </p>
       <button
@@ -353,7 +372,8 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-white/5 pt-10 text-center text-gray-400">
+    <footer id="contact" class="bg-white/5 pt-4 pb-4 text-center text-gray-400">
+      <hr class="border-gray-300 my-8" />
       <p>© 2025 Brad Tutorials. All rights reserved.</p>
       <p class="mt-2">
         Follow us on

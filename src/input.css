@@ -63,7 +63,7 @@ header {
 
 /* Create the slanted background shape */
 .clip-join {
-  clip-path: polygon(0 0, 100% 30%, 100% 70%, 0% 100%);
+  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
 }
 
 /* Simple fade-up animation */
@@ -86,4 +86,26 @@ header {
   opacity: 100 !important;
   transform: translateY(0) !important;
   transition: all 0.8s ease-out;
+}
+
+/* When element is visible */
+.tutor-in-view {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* Optional smoother motion */
+.tutor-fade-left,
+.tutor-fade-right {
+  will-change: transform, opacity;
+}
+
+.pop-image {
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.pop-in-view {
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
 }
