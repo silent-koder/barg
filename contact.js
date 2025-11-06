@@ -1,5 +1,2 @@
-initFixedHeader({
-  headerId: "glassHeader",
-  menuBtnId: "menuBtn",
-  scrollTrigger: 50,
-});
+const formKey = window.env.FORM_KEY;
+document.getElementById("contactForm").action = formKey;

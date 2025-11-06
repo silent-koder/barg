@@ -1,37 +1,28 @@
-initFixedHeader({
-  desktopScrollTrigger: 80, // header changes after 80px scroll
-  mobileScrollTrigger: 50, // header changes earlier on mobile
-});
+//
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const hamburgerIcon = document.getElementById("hamburgerIcon");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-window.addEventListener("scroll", () => {
-  // Stop effect if mobile menu is open
-  if (mobileMenu && !mobileMenu.classList.contains("hidden")) return;
+  if (!menuBtn || !hamburgerIcon || !mobileMenu) return;
 
-  const scrollTrigger = isMobile() ? mobileScrollTrigger : desktopScrollTrigger;
+  let isOpen = false;
 
-  if (window.scrollY > scrollTrigger) {
-    // Clear white styles
-    fixedHeader.classList.remove("bg-white", "border-gray-200", "shadow-md");
+  menuBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle("hidden");
 
-    // Apply solid black styles for both mobile and desktop
-    fixedHeader.classList.add("bg-black", "shadow-md");
+    // Animate rotation
+    hamburgerIcon.style.transform = isOpen ? "rotate(90deg)" : "rotate(0deg)";
 
-    // Only darken text on desktop (keep your existing nav logic)
-    if (!isMobile()) {
-      navLinks.forEach((link) => link.classList.add("text-gray-900"));
-      logo.classList.add("text-gray-900");
-      if (fixedMenuBtn) fixedMenuBtn.classList.add("text-gray-900");
+    // Morph path between hamburger ↔ X
+    const path = hamburgerIcon.querySelector("path");
+    if (isOpen) {
+      // Turn into an X
+      path.setAttribute("d", "M6 6l12 12M6 18L18 6");
+    } else {
+      // Back to hamburger
+      path.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
     }
-  } else {
-    // Reset to white header when at top
-    fixedHeader.classList.add("bg-white", "border-gray-200", "shadow-sm");
-    fixedHeader.classList.remove("bg-black", "shadow-md");
-
-    // Reset link colors on desktop (keep existing logic)
-    if (!isMobile()) {
-      navLinks.forEach((link) => link.classList.remove("text-gray-900"));
-      logo.classList.remove("text-gray-900");
-      if (fixedMenuBtn) fixedMenuBtn.classList.remove("text-gray-900");
-    }
-  }
+  });
 });

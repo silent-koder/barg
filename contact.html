@@ -1,162 +1,354 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contact Us - Tutorly</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
-        }
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
     </style>
-<script id="tailwind-config">
+    <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             colors: {
-              "primary": "#135bec",
+              primary: "#135bec",
               "background-light": "#f6f6f8",
               "background-dark": "#101622",
             },
             fontFamily: {
-              "display": ["Lexend", "sans-serif"]
+              display: ["Lexend", "sans-serif"],
             },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
           },
         },
-      }
+      };
     </script>
-</head>
-<body class="font-display bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white/90">
-<div class="relative flex min-h-screen w-full flex-col">
-<!-- TopNavBar -->
-<header class="sticky top-0 z-50 w-full border-b border-gray-200/80 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-<div class="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-<div class="flex items-center gap-4 text-[#0d121b] dark:text-white">
-<div class="h-6 w-6">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
-</svg>
-</div>
-<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Tutorly</h2>
-</div>
-<nav class="hidden items-center gap-8 md:flex">
-<a class="text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 hover:text-primary dark:hover:text-primary" href="#">Home</a>
-<a class="text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 hover:text-primary dark:hover:text-primary" href="#">Courses</a>
-<a class="text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 hover:text-primary dark:hover:text-primary" href="#">Pricing</a>
-<a class="text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 hover:text-primary dark:hover:text-primary" href="#">About Us</a>
-<a class="text-sm font-bold leading-normal text-primary" href="#">Contact</a>
-</nav>
-<div class="flex items-center gap-2">
-<button class="flex h-9 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold text-white transition-colors hover:bg-primary/90">
-<span class="truncate">Sign Up</span>
-</button>
-<button class="hidden h-9 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-200/80 px-4 text-sm font-bold text-[#0d121b] transition-colors hover:bg-gray-300/80 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:flex">
-<span class="truncate">Log In</span>
-</button>
-</div>
-</div>
-</header>
-<!-- Main Content -->
-<main class="flex-1">
-<div class="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
-<!-- PageHeading -->
-<div class="mb-12 text-center">
-<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-[#0d121b] dark:text-white sm:text-5xl">Contact Us</h1>
-<p class="mt-4 text-lg text-[#4c669a] dark:text-gray-400">We're here to help. Send us a message or find our contact details below.</p>
-</div>
-<div class="grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-16">
-<!-- Left Column: Contact Form -->
-<div class="lg:col-span-3">
-<div class="rounded-xl border border-gray-200/80 bg-white p-6 dark:border-white/10 dark:bg-background-dark/50 sm:p-8">
-<!-- SectionHeader -->
-<h2 class="mb-6 text-2xl font-bold leading-tight tracking-[-0.015em] text-[#0d121b] dark:text-white">Send a Message</h2>
-<form action="#" class="space-y-6" method="POST">
-<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-<!-- TextField: Full Name -->
-<div>
-<label class="block text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 pb-2" for="full-name">Full Name</label>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-[#cfd7e7] bg-background-light p-3 text-base text-[#0d121b] placeholder:text-[#4c669a] focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:focus:border-primary" id="full-name" name="full-name" placeholder="Enter your full name" type="text"/>
-</div>
-<!-- TextField: Email Address -->
-<div>
-<label class="block text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 pb-2" for="email">Email Address</label>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-[#cfd7e7] bg-background-light p-3 text-base text-[#0d121b] placeholder:text-[#4c669a] focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:focus:border-primary" id="email" name="email" placeholder="Enter your email address" type="email"/>
-</div>
-</div>
-<!-- TextField: Subject -->
-<div>
-<label class="block text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 pb-2" for="subject">Subject</label>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-[#cfd7e7] bg-background-light p-3 text-base text-[#0d121b] placeholder:text-[#4c669a] focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:focus:border-primary" id="subject" name="subject" placeholder="What is your message about?" type="text"/>
-</div>
-<!-- TextArea: Message -->
-<div>
-<label class="block text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 pb-2" for="message">Your Message</label>
-<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg border border-[#cfd7e7] bg-background-light p-3 text-base text-[#0d121b] placeholder:text-[#4c669a] focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:focus:border-primary" id="message" name="message" placeholder="Write your message here..." rows="5"></textarea>
-</div>
-<!-- Button: Send Message -->
-<div>
-<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-base font-bold text-white transition-colors hover:bg-primary/90" type="submit">
-<span class="truncate">Send Message</span>
-</button>
-</div>
-</form>
-</div>
-</div>
-<!-- Right Column: Contact Info & Map -->
-<div class="lg:col-span-2">
-<div class="space-y-8">
-<!-- Contact Details Section -->
-<div>
-<h3 class="mb-4 text-xl font-bold leading-tight tracking-[-0.015em] text-[#0d121b] dark:text-white">Other Ways to Reach Us</h3>
-<div class="space-y-4">
-<div class="flex items-start gap-4">
-<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<div>
-<h4 class="font-semibold text-[#0d121b] dark:text-white">Email</h4>
-<a class="text-[#4c669a] hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="mailto:contact@tutorly.com">contact@tutorly.com</a>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
-<span class="material-symbols-outlined">call</span>
-</div>
-<div>
-<h4 class="font-semibold text-[#0d121b] dark:text-white">Phone</h4>
-<a class="text-[#4c669a] hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="tel:+1234567890">+1 (234) 567-890</a>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
-<span class="material-symbols-outlined">location_on</span>
-</div>
-<div>
-<h4 class="font-semibold text-[#0d121b] dark:text-white">Address</h4>
-<p class="text-[#4c669a] dark:text-gray-400">123 Education Lane, Knowledge City, 45678</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Map Section -->
-<div>
-<div class="aspect-video w-full overflow-hidden rounded-xl">
-<iframe allowfullscreen="" data-location="San Francisco" height="100%" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.250565860368!2d-122.4211153846816!3d37.78440897975765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858097f4a5a86d%3A0xbcc5a133d1329a43!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1628896081541!5m2!1sen!2sus" style="border:0;" width="100%"></iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
-</body></html>
+  </head>
+  <body
+    class="font-display bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white/90"
+  >
+    <div class="relative flex min-h-screen w-full flex-col">
+      <!-- TopNavBar -->
+      <header
+        id="glassHeader"
+        class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 mx-auto bg-white border-b border-gray-200 shadow-sm transition-all duration-300 z-50"
+      >
+        <!-- Logo -->
+        <div class="logo-container flex items-center">
+          <img
+            id="logoDark"
+            src="./images/dark-logo.png"
+            alt="Bard Logo Dark"
+            class="h-[4rem] w-auto md:h-12 absolute inset-0"
+          />
+        </div>
+
+        <!-- Desktop Nav -->
+
+        <nav id="navMenu" class="hidden md:flex space-x-6">
+          <a
+            href="index.html"
+            class="block hover:text-blue-400 transition-colors text-gray-900"
+            >Home</a
+          >
+          <a
+            href="course.html"
+            class="hover:text-blue-500 transition-colors text-gray-900"
+            >Courses</a
+          >
+          <a
+            href="#tutors"
+            class="hover:text-blue-500 transition-colors text-gray-900"
+            >Tutors</a
+          >
+          <a
+            href="./pricing.html"
+            class="hover:text-blue-500 transition-colors text-gray-900"
+            >Pricing</a
+          >
+          <a
+            href="contact.html"
+            class="hover:text-blue-500 transition-colors text-gray-900"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden focus:outline-none transition-colors duration-300"
+          aria-label="Toggle menu"
+        >
+          <svg
+            id="hamburgerIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="black"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Mobile Dropdown -->
+        <div
+          id="mobileMenu"
+          class="absolute hidden top-full left-0 right-0 mx-auto w-4/5 max-w-md bg-gray-800 border-t border-white/20 md:hidden flex flex-col items-center py-6 space-y-4 text-lg"
+        >
+          <a
+            href="index.html"
+            class="block hover:text-blue-400 transition-colors"
+            >Home</a
+          >
+          <a
+            href="course.html"
+            class="block hover:text-blue-400 transition-colors"
+            >Courses</a
+          >
+          <a href="#tutors" class="block hover:text-blue-400 transition-colors"
+            >Tutors</a
+          >
+          <a
+            href="./pricing.html"
+            class="block hover:text-blue-400 transition-colors"
+            >Pricing</a
+          >
+          <a
+            href="contact.html"
+            class="block hover:text-blue-400 transition-colors"
+            >Contact</a
+          >
+        </div>
+      </header>
+      <!-- Main Content -->
+      <main class="flex-1">
+        <div
+          class="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20"
+        >
+          <!-- PageHeading -->
+          <div class="mb-12 text-center">
+            <h1
+              class="text-4xl font-black leading-tight tracking-[-0.033em] text-[#0d121b] dark:text-white sm:text-5xl"
+            >
+              Contact Us
+            </h1>
+            <p class="mt-4 text-lg text-[#4c669a] dark:text-gray-400">
+              We're here to help. Send us a message or find our contact details
+              below.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-16">
+            <!-- Left Column: Contact Form -->
+            <div class="lg:col-span-3">
+              <div
+                class="rounded-xl border border-gray-200/80 bg-white p-6 dark:border-white/10 dark:bg-background-dark/50 sm:p-8"
+              >
+                <!-- SectionHeader -->
+                <h2
+                  class="mb-6 text-2xl font-bold leading-tight tracking-[-0.015em] text-[#0d121b] dark:text-white"
+                >
+                  Send a Message
+                </h2>
+                <form
+                  id="contactForm"
+                  action=""
+                  class="space-y-6"
+                  method="POST"
+                >
+                  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <!-- TextField: Full Name -->
+                    <div>
+                      <label
+                        class="block text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 pb-2 required"
+                        for="full-name"
+                        >Full Name</label
+                      >
+                      <input
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-[#cfd7e7] bg-background-light p-3 text-base text-[#0d121b] placeholder:text-[#4c669a] focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:focus:border-primary"
+                        id="full-name"
+                        name="full-name"
+                        placeholder="Enter your full name"
+                        type="text"
+                        required
+                      />
+                    </div>
+                    <!-- TextField: Email Address -->
+                    <div>
+                      <label
+                        class="block text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 pb-2"
+                        for="email"
+                        >Email Address</label
+                      >
+                      <input
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-[#cfd7e7] bg-background-light p-3 text-base text-[#0d121b] placeholder:text-[#4c669a] focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:focus:border-primary"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        type="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <!-- TextField: Subject -->
+                  <div>
+                    <label
+                      class="block text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 pb-2"
+                      for="subject"
+                      >Subject</label
+                    >
+                    <input
+                      class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-[#cfd7e7] bg-background-light p-3 text-base text-[#0d121b] placeholder:text-[#4c669a] focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:focus:border-primary"
+                      id="subject"
+                      name="subject"
+                      placeholder="What is your message about?"
+                      type="text"
+                      required
+                    />
+                  </div>
+                  <!-- TextArea: Message -->
+                  <div>
+                    <label
+                      class="block text-sm font-medium leading-normal text-[#0d121b] dark:text-white/90 pb-2"
+                      for="message"
+                      >Your Message</label
+                    >
+                    <textarea
+                      class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg border border-[#cfd7e7] bg-background-light p-3 text-base text-[#0d121b] placeholder:text-[#4c669a] focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-white/20 dark:bg-white/5 dark:text-white dark:focus:border-primary"
+                      id="message"
+                      name="message"
+                      placeholder="Write your message here..."
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+                  <!-- Button: Send Message -->
+                  <div>
+                    <button
+                      class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-base font-bold text-white transition-colors hover:bg-primary/90"
+                      type="submit"
+                    >
+                      <span class="truncate">Send Message</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Right Column: Contact Info & Map -->
+            <div class="lg:col-span-2">
+              <div class="space-y-8">
+                <!-- Contact Details Section -->
+                <div>
+                  <h3
+                    class="mb-4 text-xl font-bold leading-tight tracking-[-0.015em] text-[#0d121b] dark:text-white"
+                  >
+                    Other Ways to Reach Us
+                  </h3>
+                  <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20"
+                      >
+                        <span class="material-symbols-outlined">mail</span>
+                      </div>
+                      <div>
+                        <h4
+                          class="font-semibold text-[#0d121b] dark:text-white"
+                        >
+                          Email
+                        </h4>
+                        <a
+                          class="text-[#4c669a] hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                          href="mailto:contact@tutorly.com"
+                          >contact@tutorly.com</a
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20"
+                      >
+                        <span class="material-symbols-outlined">call</span>
+                      </div>
+                      <div>
+                        <h4
+                          class="font-semibold text-[#0d121b] dark:text-white"
+                        >
+                          Phone
+                        </h4>
+                        <a
+                          class="text-[#4c669a] hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                          href="tel:+1234567890"
+                          >+1 (234) 567-890</a
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20"
+                      >
+                        <span class="material-symbols-outlined"
+                          >location_on</span
+                        >
+                      </div>
+                      <div>
+                        <h4
+                          class="font-semibold text-[#0d121b] dark:text-white"
+                        >
+                          Address
+                        </h4>
+                        <p class="text-[#4c669a] dark:text-gray-400">
+                          123 Education Lane, Knowledge City, 45678
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Map Section -->
+                <div>
+                  <div class="aspect-video w-full overflow-hidden rounded-xl">
+                    <iframe
+                      allowfullscreen=""
+                      data-location="San Francisco"
+                      height="100%"
+                      loading="lazy"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.250565860368!2d-122.4211153846816!3d37.78440897975765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858097f4a5a86d%3A0xbcc5a133d1329a43!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1628896081541!5m2!1sen!2sus"
+                      style="border: 0"
+                      width="100%"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./config.js"></script>
+    <script src="./contact.js"></script>
+  </body>
+</html>

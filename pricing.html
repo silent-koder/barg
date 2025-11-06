@@ -17,32 +17,47 @@
     <link href="./dist/output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   </head>
-  <body
-    class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 antialiased"
-  >
+  <body class="text-white">
     <header
       id="glassHeader"
-      class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 mx-auto bg-white/10 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300 z-50 text-white"
+      class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 mx-auto bg-white border-b border-gray-200 shadow-sm transition-all duration-300 z-50"
     >
       <!-- Logo -->
-      <h1 class="text-2xl font-bold transition-colors duration-300">Brad</h1>
+      <div class="logo-container flex items-center">
+        <img
+          id="logoDark"
+          src="./images/dark-logo.png"
+          alt="Bard Logo Dark"
+          class="h-[4rem] w-auto md:h-12 absolute inset-0"
+        />
+      </div>
 
       <!-- Desktop Nav -->
 
       <nav id="navMenu" class="hidden md:flex space-x-6">
-        <a href="index.html" class="block hover:text-blue-400 transition-colors"
+        <a
+          href="index.html"
+          class="block hover:text-blue-400 transition-colors text-gray-900"
           >Home</a
         >
-        <a href="course.html" class="hover:text-blue-500 transition-colors"
+        <a
+          href="course.html"
+          class="hover:text-blue-500 transition-colors text-gray-900"
           >Courses</a
         >
-        <a href="#tutors" class="hover:text-blue-500 transition-colors"
+        <a
+          href="#tutors"
+          class="hover:text-blue-500 transition-colors text-gray-900"
           >Tutors</a
         >
-        <a href="pricing.html" class="hover:text-blue-500 transition-colors"
+        <a
+          href="pricing.html"
+          class="hover:text-blue-500 transition-colors text-gray-900"
           >Pricing</a
         >
-        <a href="contact.html" class="hover:text-blue-500 transition-colors"
+        <a
+          href="contact.html"
+          class="hover:text-blue-500 transition-colors text-gray-900"
           >Contact</a
         >
       </nav>
@@ -54,11 +69,12 @@
         aria-label="Toggle menu"
       >
         <svg
+          id="hamburgerIcon"
           xmlns="http://www.w3.org/2000/svg"
           class="h-7 w-7"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
+          stroke="black"
           stroke-width="2"
         >
           <path
@@ -279,7 +295,7 @@
             class="flex flex-col sm:flex-row gap-6 items-center justify-center"
           >
             <a
-              class="w-full sm:w-auto bg-primary text-white py-3 px-8 rounded-md font-semibold hover:bg-blue-700 transition-colors"
+              class="w-full sm:w-auto bg-blue-700 text-white py-3 px-8 rounded-md font-semibold hover:bg-blue-600/50 transition-colors"
               href="#"
               >Get in touch</a
             >
@@ -291,7 +307,7 @@
                   >email</span
                 >
                 <span class="text-gray-700 dark:text-gray-300"
-                  >info@yourcompany.example.com</span
+                  >info@bard.com</span
                 >
               </div>
               <div class="flex items-center gap-3">
@@ -299,7 +315,7 @@
                   >phone</span
                 >
                 <span class="text-gray-700 dark:text-gray-300"
-                  >+1 555-555-5556</span
+                  >+234 080-123-4567</span
                 >
               </div>
             </div>
@@ -313,7 +329,7 @@
           class="flex flex-col sm:flex-row justify-between items-center gap-6"
         >
           <p class="text-gray-500 dark:text-gray-400 text-sm">
-            Copyright © Bard
+            Copyright © 2025 Bard Tutorials. All rights reserved.
           </p>
           <div class="flex space-x-4">
             <a class="social-icon-container" href="#">
@@ -361,7 +377,7 @@
       </div>
     </footer>
 
-    <script src="main.js"></script>
-    <script src="pricing.js"></script>
+    <!-- <script src="./main.js"></script> -->
+    <script src="./pricing.js"></script>
   </body>
 </html>

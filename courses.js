@@ -1,7 +1,3 @@
-initFixedHeader({
-  desktopScrollTrigger: 80, // header changes after 800px scroll
-  mobileScrollTrigger: 50, // header changes earlier on mobile
-});
 // Data
 const resources = [
   {
