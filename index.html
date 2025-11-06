@@ -10,25 +10,47 @@
 
   <body class="text-white">
     <!-- Navbar -->
+
     <header
       id="glassHeader"
-      class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 mx-auto bg-white/10 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300 z-50 text-white"
+      class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 mx-auto bg-white border-b border-gray-200 shadow-sm transition-all duration-300 z-50"
     >
       <!-- Logo -->
-      <h1 class="text-2xl font-bold transition-colors duration-300">Brad</h1>
+      <div class="logo-container flex items-center">
+        <img
+          id="logoDark"
+          src="./images/dark-logo.png"
+          alt="Bard Logo Dark"
+          class="h-[4rem] w-auto md:h-12 absolute inset-0"
+        />
+      </div>
 
       <!-- Desktop Nav -->
+
       <nav id="navMenu" class="hidden md:flex space-x-6">
-        <a href="#courses" class="hover:text-blue-500 transition-colors"
+        <a
+          href="index.html"
+          class="block hover:text-blue-400 transition-colors text-gray-900"
+          >Home</a
+        >
+        <a
+          href="course.html"
+          class="hover:text-blue-500 transition-colors text-gray-900"
           >Courses</a
         >
-        <a href="#tutors" class="hover:text-blue-500 transition-colors"
+        <a
+          href="#tutors"
+          class="hover:text-blue-500 transition-colors text-gray-900"
           >Tutors</a
         >
-        <a href="pricing.html" class="hover:text-blue-500 transition-colors"
+        <a
+          href="pricing.html"
+          class="hover:text-blue-500 transition-colors text-gray-900"
           >Pricing</a
         >
-        <a href="#contact" class="hover:text-blue-500 transition-colors"
+        <a
+          href="contact.html"
+          class="hover:text-blue-500 transition-colors text-gray-900"
           >Contact</a
         >
       </nav>
@@ -40,11 +62,12 @@
         aria-label="Toggle menu"
       >
         <svg
+          id="hamburgerIcon"
           xmlns="http://www.w3.org/2000/svg"
           class="h-7 w-7"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
+          stroke="black"
           stroke-width="2"
         >
           <path
@@ -60,7 +83,12 @@
         id="mobileMenu"
         class="absolute hidden top-full left-0 right-0 mx-auto w-4/5 max-w-md bg-gray-800 border-t border-white/20 md:hidden flex flex-col items-center py-6 space-y-4 text-lg"
       >
-        <a href="#courses" class="block hover:text-blue-400 transition-colors"
+        <a href="index.html" class="block hover:text-blue-400 transition-colors"
+          >Home</a
+        >
+        <a
+          href="course.html"
+          class="block hover:text-blue-400 transition-colors"
           >Courses</a
         >
         <a href="#tutors" class="block hover:text-blue-400 transition-colors"
@@ -69,7 +97,9 @@
         <a href="#pricing" class="block hover:text-blue-400 transition-colors"
           >Pricing</a
         >
-        <a href="#contact" class="block hover:text-blue-400 transition-colors"
+        <a
+          href="contact.html"
+          class="block hover:text-blue-400 transition-colors"
           >Contact</a
         >
       </div>
@@ -270,7 +300,7 @@
             <!-- CTA -->
             <div class="mt-10">
               <a
-                href="#contact"
+                href="contact.html"
                 class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition"
               >
                 Book a Session

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>#contact</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-display">
+    <header
+      id="glassHeader"
+      class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 mx-auto bg-white/10 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300 z-50 text-white"
+    >
+      <!-- Logo -->
+      <div class="logo-container relative flex items-center">
+        <img
+          id="logoLight"
+          src="./images/logo-light.png"
+          alt="Bard Logo Light"
+          class="h-10 w-auto md:h-12 absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100"
+        />
+        <img
+          id="logoDark"
+          src="./images/logo-dark.png"
+          alt="Bard Logo Dark"
+          class="h-10 w-auto md:h-12 absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0"
+        />
+      </div>
+
+      <!-- Desktop Nav -->
+
+      <nav id="navMenu" class="hidden md:flex space-x-6">
+        <a href="index.html" class="block hover:text-blue-400 transition-colors"
+          >Home</a
+        >
+        <a href="course.html" class="hover:text-blue-500 transition-colors"
+          >Courses</a
+        >
+        <a href="#tutors" class="hover:text-blue-500 transition-colors"
+          >Tutors</a
+        >
+        <a href="pricing.html" class="hover:text-blue-500 transition-colors"
+          >Pricing</a
+        >
+        <a href="contact.html" class="hover:text-blue-500 transition-colors"
+          >Contact</a
+        >
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menuBtn"
+        class="md:hidden focus:outline-none transition-colors duration-300"
+        aria-label="Toggle menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+
+      <!-- Mobile Dropdown -->
+      <div
+        id="mobileMenu"
+        class="absolute hidden top-full left-0 right-0 mx-auto w-4/5 max-w-md bg-gray-800 border-t border-white/20 md:hidden flex flex-col items-center py-6 space-y-4 text-lg"
+      >
+        <a href="index.html" class="block hover:text-blue-400 transition-colors"
+          >Home</a
+        >
+        <a
+          href="course.html"
+          class="block hover:text-blue-400 transition-colors"
+          >Courses</a
+        >
+        <a href="#tutors" class="block hover:text-blue-400 transition-colors"
+          >Tutors</a
+        >
+        <a href="#pricing" class="block hover:text-blue-400 transition-colors"
+          >Pricing</a
+        >
+        <a
+          href="contact.html"
+          class="block hover:text-blue-400 transition-colors"
+          >Contact</a
+        >
+      </div>
+    </header>
+    <div class="relative h-64">
+      <img
+        alt="Students studying together at a table"
+        class="w-full h-full object-cover"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo57yJmZrRL8sbsdw426VizKzFIsymTXUE7iAFn7ZrLb8R3-Iuf04OGfcldAXiLuVui1-j-VqkgAxmHFjp-Fm1PQ-WTZbvvef-cS0vs2de4YH_ywhL8hP7VhmwlNQv8HTu8O2NxuNk8iG9h8C6Icf8HvpxEV0Ph-OiyI5lP8ILod6otU_sCZjwI1jX9v1pIRdFif2kQ2bOnhekVgU9Y5cboiDkEAwMCIXtqVRGv57hIZ3lF5qZL7e4pwmDoKZibAnnihKGe6DRY9s"
+      />
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+      >
+        <h1 class="text-5xl md:text-6xl font-bold text-white">Courses</h1>
+      </div>
+    </div>
+    <!-- Content -->
+    <!-- SearchBar -->
+    <div class="px-4 py-3">
+      <label class="flex flex-col min-w-40 h-14 w-full">
+        <div
+          class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm"
+        >
+          <div
+            class="text-slate-500 flex bg-white items-center justify-center pl-4 rounded-l-xl border-r-0"
+          >
+            <span class="material-icons text-2xl">search</span>
+          </div>
+          <input
+            id="searchInput"
+            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 border-none bg-white h-full placeholder:text-slate-400 px-4 pl-2 text-base font-normal leading-normal"
+            placeholder="Search by topic, course code, or file name..."
+          />
+        </div>
+      </label>
+    </div>
+
+    <!-- Main content -->
+    <main class="flex flex-col md:flex-row gap-8 px-4 py-5">
+      <!-- Sidebar -->
+      <aside class="w-full md:w-64 lg:w-72 flex-shrink-0">
+        <div class="p-5 bg-white rounded-xl shadow-sm space-y-6">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-bold text-slate-800">Filters</h3>
+            <button
+              id="clearFilters"
+              class="text-sm font-medium text-blue-600 hover:underline"
+            >
+              Clear all
+            </button>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="font-semibold text-slate-600">Course</h4>
+            <select
+              id="courseFilter"
+              class="w-full rounded-lg border-slate-300 bg-transparent text-slate-800 focus:border-blue-500 focus:ring-blue-200 text-sm"
+            >
+              <option value="">All Courses</option>
+              <option value="CHEM101">CHEM101</option>
+              <option value="PHYS203">PHYS203</option>
+              <option value="HIST110">HIST110</option>
+              <option value="MATH150">MATH150</option>
+              <option value="BIO105">BIO105</option>
+            </select>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="font-semibold text-slate-600">Semester</h4>
+            <select
+              id="semesterFilter"
+              class="w-full rounded-lg border-slate-300 bg-transparent text-slate-800 focus:border-blue-500 focus:ring-blue-200 text-sm"
+            >
+              <option value="">All Semesters</option>
+              <option value="Fall 2022">Fall 2022</option>
+              <option value="Spring 2022">Spring 2022</option>
+              <option value="Fall 2021">Fall 2021</option>
+            </select>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Results Table -->
+      <div class="flex-1">
+        <div
+          class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"
+        >
+          <table class="w-full" id="resourcesTable">
+            <thead class="bg-slate-100">
+              <tr>
+                <th
+                  class="px-4 py-3 text-left text-slate-600 w-[40%] text-sm font-medium"
+                >
+                  Title
+                </th>
+                <th
+                  class="hidden sm:table-cell px-4 py-3 text-left text-slate-600 w-[15%] text-sm font-medium"
+                >
+                  Course
+                </th>
+                <th
+                  class="md:table-cell px-4 py-3 text-left text-slate-600 text-sm font-medium w-[20%]"
+                >
+                  Semester
+                </th>
+                <th
+                  class="px-4 py-3 text-left text-slate-600 w-[30%] text-sm font-medium"
+                >
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody id="resourcesBody" class="divide-y divide-slate-200">
+              <!-- JS will populate here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-800">
+      <div class="container mx-auto px-4 py-8">
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center gap-6"
+        >
+          <p class="text-gray-500 dark:text-gray-400 text-sm">
+            Copyright © Bard
+          </p>
+          <div class="flex space-x-4">
+            <a class="social-icon-container" href="#">
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 text-gray-600 dark:text-gray-300"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+            <a class="social-icon-container" href="#">
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 text-gray-600 dark:text-gray-300"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                ></path>
+              </svg>
+            </a>
+            <a class="social-icon-container" href="#">
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 text-gray-600 dark:text-gray-300"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.023.047 1.351.058 3.807.058h.468c2.456 0 2.784-.011 3.807-.058.975-.045 1.504-.207 1.857-.344.467-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.047-1.023.058-1.351.058-3.807v-.468c0-2.456-.011-2.784-.058-3.807-.045-.975-.207-1.504-.344-1.857a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+    <script type="module" src="./resources.js"></script>
+    <script src="./courses.js"></script>
+  </body>
+</html>
