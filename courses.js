@@ -48,8 +48,8 @@ function renderResources(filtered = resources) {
     row.className = "hover:bg-slate-50";
 
     row.innerHTML = `
-      <td class="px-4 py-2 font-medium">${item.title}</td>
-      <td class="hidden sm:table-cell px-4 py-2">${item.course}</td>
+      <td class="px-4 py-2 font-medium text-slate-600">${item.title}</td>
+      <td class="hidden sm:table-cell px-4 py-2 text-slate-600">${item.course}</td>
       <td class=" md:table-cell px-4 py-3 text-slate-600">${item.semester}</td>
       <td class="px-4 py-2">
         <div class="flex items-center gap-2">
